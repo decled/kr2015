@@ -1,7 +1,7 @@
 
-public class Main1{
+public class Main{
 	public static void main(String[] args){
-		Game1 game = new Game1();
+		Game game = new Game();
 		game.init();
 	}
 }
