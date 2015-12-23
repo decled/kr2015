@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax.swing.text.*;
 
 
-public class Game1 implements ActionListener{
+public class Game implements ActionListener{
 	private JButton[][] buttons = new JButton[3][3];
 	private JFrame frame;
 	private JPanel[] panel = new JPanel[9];
