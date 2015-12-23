@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.text.*;
-import javax.swing.Actiom.*;
+
 
 public class Game1 implements ActionListener{
 	private JButton[][] buttons = new JButton[3][3];
@@ -65,9 +65,9 @@ public class Game1 implements ActionListener{
 			}
 
 		if(state == State.PLAYER_ONE)
-			winner = "Èãðîê îäèí";
+			winner = "Player number one";
 		else
-			winner = "Èãðîê äâà";
+			winner = "Player number two";
 
 
 		if(map[0][0] != Map.NOTHING && map[0][0] == map[0][1] && map[0][0] == map[0][2]){
@@ -101,7 +101,7 @@ public class Game1 implements ActionListener{
 				for(int j=0;j<3; j++){
 					buttons[i][j].setEnabled(false);
 				}
-			label.setText(winner + " ïîáåäèòåëü!");
+			label.setText(winner + " winner!");
 			this.endOfGame();
 		}
 
@@ -119,7 +119,7 @@ public class Game1 implements ActionListener{
 			}
 
 		state = State.STANDOFF;
-		label.setText("Íè÷üÿ!");
+		label.setText("No one!");
 		this.endOfGame();
 
 	}	
@@ -143,10 +143,10 @@ public class Game1 implements ActionListener{
 					button.setEnabled(false);
 					break;
 				default:
-					System.out.println("Error! Not found this state.");
+					System.out.println("Error! 404.");
 					break;
 			}
-		}else{System.out.println("Error! It's not a button.");}
+		}else{System.out.println("Wrong!.");}
 
 		this.logicGame();
 	}
